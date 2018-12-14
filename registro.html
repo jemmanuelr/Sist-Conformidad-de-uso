@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>SistRegConf</title>
+  <link rel="shortcut icon" type="image/png" href="img/logo.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html">SistRegConf</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="consulta.html">Consulta</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"> Empresa </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="registro.html"> Registro </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="modificacion.html"> Modificación</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Emitir </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Comprobante de Pago</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Conformidad de Uso</a>
+        </div>
+      </li>
+    </ul>
+  </div>  
+</nav>
+<br>
+
+<div class="container">
+  <br>
+  <form action="registrar.php" method="post" class="form">
+    <div class="row">
+      <div class="col-md-12">
+        <div role="tabpanel">
+          <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist"><!-- pestaña de opciones -->
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#repre" role="tab" aria-controls="home" aria-selected="true"> Representante Legal </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#empresa" role="tab" aria-controls="profile" aria-selected="false"> Datos de la Empresa </a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="repre" role="tabpanel" aria-labelledby="home-tab"><!-- primera pestaña -->
+              <br>
+              <input type="text" class="form-control" name="cedula" placeholder="CI DEL REPRESENTANTE LEGAL" required="required" autofocus>
+              <br>
+              <input type="text" class="form-control" name="nombre_completo" placeholder="NOMBRES Y APELLIDOS DEL REPRESENTANTE LEGAL" required="required">
+              <br>
+              <input type="text" class="form-control" name="telefono" placeholder="TELEFONO DEL REPRESENTATNTE LEGAL" required="required">
+            </div>
+            <div class="tab-pane fade" id="empresa" role="tabpanel" aria-labelledby="profile-tab"><!-- segunda pestaña -->
+              <br>
+              <div class="row">
+                <div class="col-md-4">
+                  <input type="text" class="form-control" name="rif" placeholder="RIF de la Empresa" required="required">
+                </div>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" name="nomb_empresa" placeholder="Nombre de la Empresa" required="required">
+                </div>
+              </div>
+              <br>
+              <input type="text" class="form-control" name="objeto" placeholder="Objeto de la Empresa" required="required">
+              <br>
+              <div class="row">
+                <div class="col-md-6">
+                  <select name="parroquia" id="parroquia" class="form-control"  required="required">
+                    <option value="">Parroquia</option>
+                    <option value="Alto de Los Godos">Alto de Los Godos</option>
+                    <option value="Boquerón">Boquerón</option>
+                    <option value="Las Cocuizas">Las Cocuizas</option>
+                    <option value="San Simón">San Simón</option>
+                    <option value="Maturín">Maturín</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="El Corozo">El Corozo</option>
+                    <option value="El Furrial">El Furrial</option>
+                    <option value="Jusepín">Jusepín</option>
+                    <option value="La Pica">La Pica</option>
+                    <option value="San Vicente">San Vicente</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" name="sector" placeholder="Sector" required="required">
+                </div>
+              </div>
+              <br>
+              <input type="text" class="form-control" name="direccion" placeholder="Dirección Fiscal" required="required">
+              <br>
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control" name="zonificacion" placeholder="Zonificación" required="required">
+                    <br>
+                    <select name="act_comercial" id="act_comercial" class="form-control" required="required">
+                      <option value=""> Actividad Comercial</option>
+                      <option value="comercial">Comercial</option>
+                      <option value="deportiva">Deportiva</option>
+                      <option value="educacional">Educacional</option>
+                      <option value="empresarial">Empresarial</option>
+                      <option value="industrial">Industrial</option>
+                      <option value="residencial">Residencial</option>
+                      <option value="residencial-comercial">Residencial-Comercial</option>
+                    </select>   
+                  </div>
+                  <div class="col">
+                    <input type="date" name="fecha" id="fecha" class="form-control" required="required">
+                    <br>
+                    <select name="status" id="status" class="form-control" required="required">
+                      <option value="">Status</option>
+                      <option value="renovacion">Renovación</option>
+                      <option value="Impeccionado por: Gerardo Marquina">Impeccionado por: Gerardo Marquina</option>
+                      <option value="Impeccionado por: Juan Saragay">Impeccionado por: Juan Saragay</option>
+                      <option value="Impeccionado por: Karla Amaris">Impeccionado por: Karla Amaris</option>
+                      <option value="Impeccionado por: Neurelis Morales">Impeccionado por: Neurelis Morales</option>
+                      <option value="Impeccionado por: Rodolfo Cortez">Impeccionado por: Rodolfo Cortez</option>
+                    </select>
+                  </div>
+                </div>              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-lg btn-primary btn-block" type="reset">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Limpiar
+              </font>
+            </font>
+          </button>
+        </div>
+        <div class="col">
+          <button  type="submit" id="btn_registrar" class="btn btn-lg btn-primary btn-block">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Registrar 
+              </font>
+            </font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+  <script src="cont/codigo.php"></script>
+</body>
+</html>
+
+

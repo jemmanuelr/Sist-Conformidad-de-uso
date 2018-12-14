@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>SistRegConf</title>
+  <link rel="shortcut icon" type="image/png" href="img/logo.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html">SistRegConf</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="consulta.html">Consulta</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"> Empresa </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="registro.html"> Registro </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="modificacion.html"> Modificación</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Emitir </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Comprobante de Pago</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Conformidad de Uso</a>
+        </div>
+      </li>
+    </ul>
+  </div>  
+</nav>
+<br>
+
+<div class="container">
+  <br>
+  <form action="" class="form">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <select name="consulta" id="consulta" class="form-control">
+                <option value="rif">RIF</option>
+                <option value="cedula">CI</option>
+              </select>
+              </div>
+              <div class="col-md-10">
+                <input type="text" name="opcion" id="opcion" class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-lg btn-primary btn-block" type="reset">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Limpiar
+              </font>
+            </font>
+          </button>
+        </div>
+        <div class="col">
+          <button  type="submit" id="btn_buscar" class="btn btn-lg btn-primary btn-block">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Buscar 
+              </font>
+            </font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+  <script src="codigo.js"></script>
+</body>
+</html>
+
+
